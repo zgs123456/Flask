@@ -78,21 +78,21 @@ class SingleLinklist(object):
             # 让pos前一个节点指向新节点
             cur.next = node
 
-    def remove(self,item):
-        #删除节点
-        cur=self.__head
-        #pro记录当前节点的前一个节点
-        pro=None
+    def remove(self, item):
+        # 删除节点
+        cur = self.__head
+        # pro记录当前节点的前一个节点
+        pro = None
         while cur is not None:
-            #判断当前节点是不是要删除的节点
-            if cur.item==item:
-                #如果pro为空，说明删除的是首节点
+            # 判断当前节点是不是要删除的节点
+            if cur.item == item:
+                # 如果pro为空，说明删除的是首节点
                 if pro is None:
-                    self.__head=cur.next
+                    self.__head = cur.next
                 else:
-                    pro.next=cur.next
-            pro=cur
-            cur=cur.next
+                    pro.next = cur.next
+            pro = cur
+            cur = cur.next
 
     def search(self, item):
         """查找节点是否存在"""
@@ -105,10 +105,6 @@ class SingleLinklist(object):
         return False
 
 
-
-
-
-
 if __name__ == '__main__':
     sss = SingleLinklist()
     print(sss.is_empty())
@@ -119,7 +115,10 @@ if __name__ == '__main__':
     sss.append(22)
     print(sss.travel())
     sss.insert(1, 222)
+    sss.insert(4, 333)
+    sss.insert(0, 5)
     print(sss.travel())
     sss.remove(22)
     print(sss.travel())
     print(sss.search(1))
+    print(sss.search(99))
