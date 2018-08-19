@@ -52,7 +52,6 @@ if __name__ == '__main__':
     # ll = [3, 5, 6]
     # rl = [1, 2, 4,7]
     # print(merge(ll, rl))
-
     # 稳定性：稳定
     # 最优时间复杂度：O(nlogn)
     # 最坏时间复杂度：O(nlogn)
